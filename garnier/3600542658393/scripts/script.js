@@ -24,14 +24,22 @@
   const swiper = new Swiper('#es-rc .es-swiper', {
     loop: true,
     slidesPerView: 'auto',
-    spaceBetween: 30,
     autoHeight: false,
+    slidesPerView: 1,
     pagination: {
       el: '#es-rc .es-swiper-pagination',
     },
     navigation: {
       nextEl: '#es-rc .es-swiper-button-next',
       prevEl: '#es-rc .es-swiper-button-prev',
+    },
+    breakpoints: {
+      500: {
+        slidesPerView: '2',
+      },
+      1200: {
+        slidesPerView: 'auto',
+      },
     },
   });
 })();
